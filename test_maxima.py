@@ -50,7 +50,6 @@ def test_plateau1():
     exp = []
     assert exp == out
 
-
 def test_plateau2():
     inp = [1, 2, 2, 3, 1]
     out = find_maxima(inp)
