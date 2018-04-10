@@ -17,14 +17,21 @@ def test_simple_sequence_one_maximum():
 def test_sine_wave():
     inp = [np.sin(2*alpha) for alpha in np.linspace(0.0, 5.0, 100)]
     out = find_maxima(inp)
-    exp = [16,78]
+    exp = [16, 78]
     assert exp == out
 
 def test_max_on_both_borders():
     inp = [4, 2, 1, 3, 1, 2]
     out = find_maxima(inp)
-    exp = [0,3,5]
+    exp = [0, 3, 5]
     assert exp == out
+
+def test_max_on_both_borders_and_absolute_max_on_right_border():
+    inp = [4, 2, 1, 3, 1, 5]
+    out = find_maxima(inp)
+    exp = [0, 3, 5]
+    assert exp == out
+
 
 # additional tests for
 # - max on both borders
