@@ -38,6 +38,12 @@ def test_one_max_on_left_border():
     exp = [0]
     assert exp == out
 
+def test_one_max_on_right_border():
+    inp = [-1, 0, 1, 2, 4]
+    out = find_maxima(inp)
+    exp = [4]
+    assert exp == out
+
 def test_plateau1():
     inp = [1, 2, 2, 1]
     out = find_maxima(inp)
@@ -55,6 +61,12 @@ def test_plateau3():
     inp = [1, 3, 2, 2, 1]
     out = find_maxima(inp)
     exp = [1]
+    assert exp == out
+
+def test_plateau4():
+    inp = [3, 2, 2, 3]
+    out = find_maxima(inp)
+    exp = [0, 3]
     assert exp == out
 
 
